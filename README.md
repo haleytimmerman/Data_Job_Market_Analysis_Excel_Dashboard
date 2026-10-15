@@ -1,6 +1,6 @@
 # Data Science Job Market Analysis and Excel Dashboard
 
-![final created dashboard]()
+![Final dashboard](https://github.com/user-attachments/assets/1872a904-5449-450e-8bdc-10ab904166ff "Final dashboard")
 
 ## Introduction
 
@@ -37,19 +37,19 @@ First, I used Power Query and M language to extract the data from the Excel file
 
 This query, seen below, contains messy lists of skills and multiple schedule options within single rows, so I referenced this query to create two additional queries in order to clean and make these portions of data usable in future PivotTables.
 
-![data_jobs query]()
+![data_jobs query](https://github.com/user-attachments/assets/4b260d9c-baa8-49ff-9b60-33a8c46d75ba "data_jobs query")
 
 In the query `data_jobs_skills`, I removed all columns except job IDs and job skills, removed extra characters, split and expanded the lists of skills to contain one skill per row, and removed existing duplicates.
 
-![data_jobs_skills query]()
+![data_jobs_skills query](https://github.com/user-attachments/assets/bebece0e-bf96-48ad-812d-bca28afadaf9 "data_jobs_skills query")
 
 In the query `data_jobs_schedules`, I again narrowed down to two columns and expanded lists of schedule types corresponding to each job ID. 
 
-![data_jobs_schedules query]()
+![data_jobs_schedules query](https://github.com/user-attachments/assets/d8f9b33a-931e-4c60-959d-d2ebad4072d1 "data_jobs_schedules query")
 
 Finally, I loaded all three queries to the data model within Power Pivot and defined their relationships using corresponding job IDs.
 
-![power pivot data model relationships]()
+![Power Pivot data model relationships](https://github.com/user-attachments/assets/b1ef2e6a-e5ab-412a-a632-8baa4c51ff2b "Power Pivot data model relationships")
 
 ## EDA (Exploratory Data Analysis) & Visualization
 
@@ -87,7 +87,7 @@ I also wrote "All Job Titles" in the cell above the array. Then I used this list
 ```
 ### Analysis
 
-![Salary Analysis worksheet containing combo chart and histograms]()
+![Salary Analysis worksheet containing combo chart and histograms](https://github.com/user-attachments/assets/0dd283d1-c830-4120-ab63-af2ed75aeec6 "Salary Analysis worksheet")
 
 * Looking at the Yearly vs. Hourly Salaries Comparison chart, data engineers, data scientists, and senior roles recieve the greatest yearly salaries with business analysts having the lowest yearly salary. Data engineers and senior data engineers have the highest hourly salaries with data analyst having the lowest hourly salary.
 * Across every job title, the median yearly salary is greater than a year's worth of hourly salary for the same title, with business analyst yearly salary being barely higher than hourly and senior data scientist yearly salary being over twice as much as hourly salary for the same title. This suggests it might be easier to find higher pay when looking at jobs offering yearly salaries, especially for the titles displaying larger differences.
@@ -95,7 +95,7 @@ I also wrote "All Job Titles" in the cell above the array. Then I used this list
 
 #### What About Data Analysts?
 
-![Histograms filtered to data analyst]()
+![Histograms filtered to data analyst](https://github.com/user-attachments/assets/574a2f30-55bd-43cf-ae12-af27f09af210 "Filtering to data analyst")
 
 * Many yearly salaries fall between $70K-$106K, peaking between $88K-$97K, and drop off before $52K and after $115K. Hourly salaries have a high spike between $22-$26. Both yearly and hourly distributions again extend at the upper end, indicating significantly higher-paying jobs exist but are relatively few.
 
@@ -107,14 +107,14 @@ In order to see the salaries associated with these top skills, I created an inde
 
 ### Analysis
 
-![Job Skills Analysis worksheet containing top skills and skill salaries]()
+![Job Skills Analysis worksheet containing top skills and skill salaries](https://github.com/user-attachments/assets/d6f3a738-08c3-469c-9045-8fdd70bf4cfa "Job Skills Analysis worksheet")
 
 * When including all job titles, the charts as well as conditional formatting on the tables reveals a large jump between the number of postings mentioning SQL and Python, 18,000 and 17,689  respectively, and the next highest demand skill Tableau, mentioned in 7,043 postings.
 * Spark is the skill out of the top ten most frequent skills associated with the highest median salary, $140,000, and is mentioned in 5,290 job postings.
 
 #### What About Data Analysts?
 
-![Job Skills Analysis filtered to data analyst]()
+![Job Skills Analysis filtered to data analyst](https://github.com/user-attachments/assets/efab2d13-56a5-4b41-9a59-d329c202e1de "Filtering to data analyst")
 
 * For data analyst jobs, SQL remains the skill in highest demand at 5,033 postings followed by Excel at 3,839. Python has dropped to third highest demand skill at 2,765 with Tableau close behind.
 * Of the ten highest demand skills, Python is associated with the highest salaries with a median yearly salary of $98,500. Almost all median salaries tied to these skills are $90K or more.
@@ -126,11 +126,13 @@ To find the answer, I created a PivotTable of job counts by `job_posted_date`, w
 
 ### Analysis
 
-![Monthly job postings chart]()
+![Monthly job postings line chart](https://github.com/user-attachments/assets/e1df612b-e7a5-463c-95b6-92576d86c6e3 "Monthly job postings")
 
 * When including all data science jobs, job postings rise and fall, peaking in August at 3554 postings, then decline towards the end of the year, with November having the fewest postings of 1,963. Thus, it might generally be easier to find job opportunities earlier in the year.
 
 #### What About Data Analysts?
+
+![Monthly data analyst job postings chart](https://github.com/user-attachments/assets/e26d5b12-33f6-4eb2-a860-dcdd4e48d7c1 "Filtering to data analysts")
 
 * Filtering to only data analyst job postings, postings are high in January with 982 postings, peak in August at 1031 postings, and then fall in later months with the lowest posting count of 645 in November, again suggesting more data analyst job opportunities in the earlier months of the year.
 
@@ -148,16 +150,17 @@ I added both of these measures to the PivotTable values, added conditional forma
 
 ### Analysis
 
-![Postings Analysis worksheet containing monthly remote postings line chart]()
+![Monthly remote postings line chart](https://github.com/user-attachments/assets/16ecfc64-fa3c-4dd0-a72f-ab5dfc68670e "Monthly remote postings")
 
 * When including all data science jobs, remote postings rise and fall in proportion with total postings as seen by the steady percentages in the first half of the year. October saw the highest count of remote postings at 612 while November saw the lowest count of 371, December barely having more postings than that. This again indicates jobs being in lower supply at the end of the year.
 * Remote job postings remained relatively steady in the months that total jobs peaked, dropping the remote job percentage to 12.7% in August. Remote postings then rose while total postings decreased, causing October to see the highest percentage of remote job postings at 24.0%. One possible reason for the sudden increase of in-person jobs after May and the fluctuations of remote jobs may have been the world adjusting to the ending of the COVID-19 pandemic in 2023.
 
 #### What About Data Analysts?
 
+![Monthly remote data analyst postings chart](https://github.com/user-attachments/assets/4767ea19-93d2-4b14-94b5-4fbb9f244a7f "Filtering to data analyst")
+
 * For data analysts, remote jobs are high in January at 114 postings, then fewest from February to April at 78-79, and peaking in October at 137. The lowest remote job percentage was in March at 10.2% with another dip during August as in-person jobs peaked. The following months saw total jobs drop while remote jobs peaked, with the highest percentage of remote jobs being 17.2% in October.
 * The percentage of remote jobs for data analysts is lower than the percentage for all data science jobs, suggesting it may be somewhat harder to find remote jobs as a data analyst than other data science titles. However, remote job postings can also behave independently of total job postings, so remote jobs may at times become easier to find even while total jobs are dropping.
-
 
 ### 5. How do different schedule types make up total job postings?
 
@@ -165,9 +168,13 @@ Placing job counts as well as job count percentages by schedule types in a Pivot
 
 ### Analysis
 
+![Schedule types pie chart](https://github.com/user-attachments/assets/7159401a-543d-461c-8303-fe1e5c323b7f "Schedule types pie chart")
+
 * When including all data science jobs, full-time jobs are the majority with 27278 postings making up 77.01% of all postings, followed by contractor jobs at 14.24% and part-time at 5.9% with the rest being a slim minority.
 
 #### What About Data Analysts?
+
+![Data analyst schedule types pie chart](https://github.com/user-attachments/assets/2122f6cf-ae2b-492f-93ee-a2d5087cf9c2 "Filtering to data analyst")
 
 * Full-time jobs are still the majority but make up a slightly smaller percentage with 7,647 being 73.68% of data analyst job postings. Contractor and part-time postings make up slightly higher percentages at 16.79% and 6.51% respectively.
 
@@ -209,7 +216,7 @@ Finally, I moved all the charts into a new worksheet and formatted the charts an
 
 ## Final Analysis and Insights
 
-[Final Dashboard]
+![Final Dashboard](https://github.com/user-attachments/assets/9328df5e-ec01-4604-8e54-9cdd95c43a24 "Final dashboard")
 
 * Data analysts are in highest demand as seen by having the highest count of job postings out of all data science titles followed by data scientist, data engineer, and their senior roles. Cloud engineers have the fewest postings.
 * Data analyst jobs have the lowest median hourly pay and the second lowest median yearly salary. However, salary distribution seen in earlier histograms show some opportunities for much higher pay than the median.
